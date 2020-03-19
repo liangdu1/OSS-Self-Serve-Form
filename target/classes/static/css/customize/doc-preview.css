@@ -1,0 +1,86 @@
+html {
+    font-size: 100%;
+}
+
+.modal-title-wrapper-docpreview {
+    background-color: #888;
+    height: 72px;
+
+}
+
+.modal-title-docpreview {
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+    color: #fff !important;
+    padding: 0 48px 0 24px !important;
+    line-height: 4.5rem !important;
+    font-size: 1rem !important;
+    height: 100%;
+
+}
+
+.text-truncate {
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+@font-face {
+    font-family: 'web-esl';
+    src: url('/font/web-esl.woff') format('woff');
+}
+
+
+.ossicon-modal-close:before {
+    content: "";
+    vertical-align: 0px !important;
+}
+
+/*.ossicon-modal-close {*/
+    /*font-size: 30px;*/
+
+/*}*/
+
+.modal-close-button {
+    border: 0px;
+    background-color: #888;
+    font-size: 1.25rem !important;
+    line-height: 4.5rem;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    cursor: pointer;
+    padding: 0px;
+    height: 100%;
+    width: 48px;
+}
+
+h3 {
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+}
+
+.modal-body-docpreview {
+    overflow-y: auto !important;
+    height: calc(100% - 4.5rem);
+    max-height: inherit !important;
+    padding: 1.5rem .625rem !important;
+    /*color: #444;*/
+}
+
+@media screen and (min-width: 39.375em) {
+    .modal-body-docpreview {
+        padding-right: 1.25rem !important;
+        padding-left: 1.25rem !important;
+    }
+
+}
+
+.content-wrapper-docpreview {
+    max-width: 768px;
+    margin: 0 auto;
+}

@@ -1,0 +1,69 @@
+﻿span.stretch {
+    display: inline-block;
+    -webkit-transform: scale(2,1); /* Safari and Chrome */
+    -moz-transform: scale(2,1); /* Firefox */
+    -ms-transform: scale(2,1); /* IE 9 */
+    -o-transform: scale(2,1); /* Opera */
+    transform: scale(2,1); /* W3C */
+}
+
+/* The switch - the box around the slider */
+.switch-oss {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch-oss input {
+    display: none;
+}
+
+/* The slider */
+.slider-oss {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+    .slider-oss:before {
+        position: absolute;
+        content: "";
+        height: 19px;
+        width: 19px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+input[type="checkbox"]:checked + .slider-oss {
+    background-color: #2f94D0;
+}
+
+input[type="checkbox"]:focus + .slider-oss {
+    box-shadow: 0 0 1px #2f94D0;
+}
+
+input[type="checkbox"]:checked + .slider-oss:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider-oss.round-oss {
+    border-radius: 28px;
+}
+
+    .slider-oss.round-oss:before {
+        border-radius: 50%;
+    }

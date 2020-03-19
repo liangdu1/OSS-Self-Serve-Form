@@ -1,0 +1,703 @@
+.navbar-fixed-bottom .container {
+  width: initial;
+}
+
+.container {
+  margin-right: initial;
+  margin-left: initial;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #13687f;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: #13687f;
+}
+
+.nav .dropdown-submenu.open > a,
+.nav .dropdown-submenu.open > a:hover,
+.nav .dropdown-submenu.open > a:focus {
+    border-color: transparent;
+}
+
+.navbar-inner {
+  background-color: initial;
+  background-image: initial;
+  background-image: initial;
+  background-image: initial;
+  background-image: initial;
+  background-image: initial;
+  background-repeat: initial;
+}
+
+.navbar-inverse .navbar-inner {
+  background-image: initial;
+  background-image: initial;
+  background-image: initial;
+  background-image: initial;
+  background-image: initial;
+  background-repeat: initial;
+}
+
+.ltr .nav-tabs > li
+{
+    float: left;
+}
+.rtl .nav-tabs > li
+{
+    float: right;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+.input-box,
+.fake-select {
+  display: inline-block;
+  height: 28px;
+  width: 220px;
+  padding: 3px 6px;
+  margin-bottom: 10px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+textarea {
+  height: auto;
+}
+
+textarea:focus,
+input:focus,
+.input-box:focus {
+    border: 1px solid #37b3e6;
+}
+
+/* common dialog styles */
+div.modal {
+  position: fixed;
+  z-index: 1050;
+  outline: none;
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding-box;
+          background-clip: padding-box;
+
+    display: block;
+    overflow: auto;
+    bottom: auto;
+    max-width: calc(100% - 20px);
+    max-width: -webkit-calc(100% - 20px);
+    max-width: -moz-calc(100% - 20px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0;
+    -webkit-filter: blur(0);    
+}
+div.modal.fade .modal-dialog {
+    opacity: 0;
+    /*-webkit-transition: top 0.3s linear 0s, opacity 0.3s linear 0s;
+    transition: top 0.3s linear 0s, opacity 0.3s linear 0s;*/
+}
+div.modal.fade.in .modal-dialog {
+    opacity: 1;
+    -moz-transition: .2s linear opacity !important; /* temp value */
+    -o-transition: .2s linear opacity !important;
+    -webkit-transition: .2s linear opacity !important;
+    transition: .2s linear opacity !important;
+}
+div.modal.fade.in.initial, div.modal.fade.in.initial .modal-dialog {
+    opacity: 0;
+}
+div.modal-dialog.fade.ensureRemoved {
+    /*top: -100% !important;
+    opacity: 0 !important;*/
+    /*-webkit-transition: top 0.1s linear 0s, opacity 0.1s linear 0s;
+    transition: top 0.1s linear 0s, opacity 0.1s linear 0s;*/
+}
+.modal-dialog {
+    max-width: 576px; /* medium-dialog */
+}
+.modal-dialog {
+    padding: 0;
+}
+.modal-content {
+    background-color: #fafafa;
+    border-radius: 0px;
+}
+body.modal-open
+{
+    margin-right: 0 !important;
+}
+.modal .nav.nav-tabs { /* tab styling */
+    padding: 10px 0 0 20px;
+    margin: 0;
+}
+.modal-header
+{
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    height: 65px;
+}
+/* prevent overlapping between title and close icon */
+.ltr .modal-header
+{
+    padding: 24px 42px 16px 24px;
+}
+.rtl .modal-header
+{
+    padding: 24px 24px 16px 42px;
+}
+
+.dialogHeaderText
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 100%;
+    line-height: 25px;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -.3px;
+    color: #606060;
+}
+.rtl .dialogHeaderText {
+    vertical-align: -webkit-baseline-middle;
+}
+
+.dialogClose
+{
+    position: absolute;
+    top: 22px;
+    cursor: pointer;
+}
+.ltr .dialogClose
+{
+    right: 15px;
+}
+.rtl .dialogClose
+{
+    left: 15px;
+}
+.dialogClose.noTitle {
+    top: 11px;
+}
+.dialogClose:hover, .dialogClose:focus {
+    opacity: 1.0;
+}
+.modal-body {
+    padding: 0;
+    font-size: 14px;
+    font-weight:normal;
+    overflow-y: auto;
+    background-color: transparent;
+}
+.modal-body-inner {
+    padding: 16px 24px;
+    position: relative;
+}
+.modal-footer {
+    height: 65px;
+    margin-top: 0;
+    border-top: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    clear: both;
+    text-align: right;
+    padding: 16px 24px;
+}
+.rtl .modal-footer {
+    text-align: left;
+}
+.modal-footer .btn {
+    margin-top: 2px;
+}
+.modal-footer .helpButton {
+    position: absolute;
+    cursor: pointer;
+    left: 20px;
+    display: none;
+}
+.rtl .modal-footer .helpButton {
+    right: 20px;
+    left: initial;
+    left: auto;
+}
+.modal-backdrop {
+    opacity: 0.5;
+}
+.modal.behind-backdrop
+{
+    z-index: 1029;
+}
+.modal-loading .modal-dialog {
+    z-index: 1051;
+    width: 200px;
+}
+.modal-loading.modal-hidden {
+    display: none !important;
+}
+.LoginDialogController .modal-dialog {
+    z-index: 1052;
+}
+.modal-body .section * {
+    vertical-align: middle;
+}
+.modal-body .section .sectionHeading {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.modal-body .section textarea {
+    resize: none;
+}
+/* add margin to the top of the section after the first visible section */
+.modal-body :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ .section {
+    margin-top: 24px;
+}
+.modal-body .section * {
+    margin-bottom: 0;
+}
+.modal-body .section, .modal-body .section .block {
+    display: block;
+}
+.modal-body .section .vpad {
+    padding: 20px 0;
+}
+.modal-body td {
+    padding: 0;
+}
+/* add margin to the top of the element if it is not the first visible element */
+.modal-body .section :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ .block:not(.section),
+.modal-body .section > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ div:not([style*="display:"]):not(.section),
+.modal-body .section > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ [style*="display:block"]:not(.section),
+.modal-body .section > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ [style*="display: block"]:not(.section),
+.modal-body .table-cell > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ .block:not(.section),
+.modal-body .table-cell > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ div:not([style*="display:"]):not(.section),
+.modal-body .table-cell > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ [style*="display:block"]:not(.section),
+.modal-body .table-cell > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ [style*="display: block"]:not(.section),
+.modal-body td > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ .block:not(.section),
+.modal-body td > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ div:not([style*="display:"]):not(.section),
+.modal-body td > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ [style*="display:block"]:not(.section),
+.modal-body td > :not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ [style*="display: block"]:not(.section) {
+    margin-top: 10px;
+}
+.modal-body .section .table-row:not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ .table-row > .table-cell,
+.modal-body .section tr:not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ tr > td {
+    padding-top: 10px;
+}
+.modal-body .table-container {
+    display: table;
+}
+.modal-body .table-row {
+    display: table-row;
+}
+.modal-body .table-cell {
+    display: table-cell;
+}
+.modal-body .table-cell, .modal-body .table-cell *:not(.caret), .modal-body td, .modal-body .section td {
+    vertical-align: top;
+}
+.modal-body .table-cell:first-child, .modal-body td:first-child {
+    white-space: nowrap;
+}
+.modal-body .table-cell:not(:last-child), .modal-body td:not(:last-child) {
+    padding-right: 16px;
+}
+.rtl .modal-body .table-cell:not(:last-child), .rtl .modal-body td:not(:last-child) {
+    padding-right: 0;
+    padding-left: 16px;
+}
+.modal-body .section-link { /* assumed the link will never be on top */
+    margin-top: 20px;
+}
+.modal-body .btn-link {    
+    text-decoration: none;
+}
+.modal-body .section input[type="checkbox"],
+.modal-body .section input[type="radio"] {
+    margin-top: 3px;
+    margin-right: 5px;
+    vertical-align: top;
+}
+.rtl .modal-body .section input[type="checkbox"],
+.rtl .modal-body .section input[type="radio"] {
+    margin-left: 5px;
+    margin-right: 0;
+}
+.modal-body .section {
+    line-height: 20px;
+}
+.modal-body .section ul:not(.dropdown-menu) {
+    padding-left: 15px;
+}
+.modal-body .section > ul li:not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ li,
+.modal-body .section .table-cell > ul li:not([style*="display:none"]):not([style*="display: none"]):not(.ng-hide) ~ li {
+    margin-top: 10px;
+}
+.modal-footer .btn-link + .btn {
+    margin-right: 0;
+}
+.modal-footer .btn-link, .modal-body .section-link .btn-link {
+    padding-left: 0;
+    padding-right: 0;
+}
+.modal-body input.ng-invalid:not([disabled="disabled"]):not([on-blur-validator]) {
+    border-color: red;
+}
+.modal-body .explanation {
+    color: #8E8E8E;
+}
+/* end common dialog styles */
+
+/* start modal dialog insertPagePicker style */
+.modal-body [insert-page-picker] {
+    margin-bottom: -10px;
+}
+.modal-body [insert-page-picker] label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.modal-body [insert-page-picker] input:not([type="radio"]) {
+    margin-bottom: 10px;
+}
+/* end insertPagePicker style */
+
+ul {
+    padding: 0px;
+}
+
+/* these have a different min in bootstrap */
+@media (min-width: 0px) {
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .rtl .navbar-nav {
+    float: right;
+  }
+  .navbar-nav > li {
+    float: left;
+  }
+  .rtl .navbar-nav > li {
+    float: right;
+  }
+  .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (min-width: 0px) {
+  .navbar-left {
+    float: left !important;
+  }
+  .navbar-right {
+    float: right !important;
+  }
+}
+
+.nav-pills > li > a {
+    border-radius: 0px;
+}
+
+.dropdown-menu {
+    /*border-radius: 4px 4px 4px 4px !important;*/
+}
+
+/* BS3 doesn't have dropdown menus */
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+     -moz-border-radius: 0 6px 6px 6px;
+          border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu > .dropdown-menu.pull-right {
+    left: auto;
+    right: 100%;
+}
+
+/*.dropdown-submenu:hover > .dropdown-menu {
+  display: block !important;
+}*/
+
+.dropdown-menu:not(.keepSubmenuOpen) .dropdown-submenu:hover > .dropdown-menu,
+.dropdown-menu.keepSubmenuOpen .dropdown-submenu.stayOpen > .dropdown-menu {
+  display: block !important;
+}
+
+.dropup .dropdown-submenu > .dropdown-menu {
+  top: auto;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: -2px;
+  -webkit-border-radius: 5px 5px 5px 0;
+     -moz-border-radius: 5px 5px 5px 0;
+          border-radius: 5px 5px 5px 0;
+}
+
+.dropdown-submenu > a:after {
+  display: block;
+  float: right;
+  width: 0;
+  height: 0;
+  margin-top: 6px;
+  margin-right: -10px;
+  border-color: transparent;
+  border-left-color: #646464 !important;
+  border-style: solid;
+  border-width: 4px 0 4px 4px;
+  content: " ";
+}
+.dropdown-submenu.mobileSubmenuOpen > a:after {
+  transform: rotate(90deg);
+}
+.dropdown-submenu:hover > a:after {
+  border-left-color: #ffffff;
+}
+
+.dropdown-submenu.disabled:hover > a:after {
+  border-left-color: #cccccc;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+     -moz-border-radius: 6px 0 6px 6px;
+          border-radius: 6px 0 6px 6px;
+}
+
+/* progress bar update due to bootstrap3 changes */
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-moz-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.progress {
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+          transition: width 0.6s ease;
+}
+
+.progress-striped .progress-bar {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+
+.progress.active .progress-bar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+     -moz-animation: progress-bar-stripes 2s linear infinite;
+      -ms-animation: progress-bar-stripes 2s linear infinite;
+       -o-animation: progress-bar-stripes 2s linear infinite;
+          animation: progress-bar-stripes 2s linear infinite;
+}
+
+.progress-bar-success {
+  background-color: #5cb85c;
+}
+
+.progress-striped .progress-bar-success {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.progress-bar-info {
+  background-color: #5bc0de;
+}
+
+.progress-striped .progress-bar-info {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.progress-bar-warning {
+  background-color: #f0ad4e;
+}
+
+.progress-striped .progress-bar-warning {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.progress-bar-danger {
+  background-color: #d9534f;
+}
+
+.progress-striped .progress-bar-danger {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* alerts */
+
+.alert-success {
+  color: #497d1a;
+  background-color: #e5f4d3;
+  border-color: rgba(73,125,26,.3);
+}
+
+.alert-info {
+  color: #2e81b0;
+  background-color: #daedf7;
+  border-color: rgba(46,129,176,.3);
+}
+
+.alert-warning {
+  color: #997234;
+  background-color: #fdfdd2;
+  border-color: rgba(202,179,64,.5);
+}
+
+.alert-danger {
+  color: #a14342;
+  background-color: #f3dddc;
+  border-color: rgba(170,85,85,.3);
+}
+
+.font-color-danger {
+  color: #a14342;
+}
+
+/* Extra RTL goodness */
+.rtl .pull-left
+{
+    float: right !important;
+}
+
+.rtl .pull-right
+{
+    float: left !important;
+}
+
+.ltr .modal-footer .btn {
+    margin-left: 8px;
+    margin-right: 0;
+}
+.ltr .modal-footer .pull-left .btn, .ltr .modal-footer .pull-left.btn {
+    margin-right: 8px;
+    margin-left: 0;
+}
+.rtl .modal-footer .btn {
+    margin-right: 8px;
+    margin-left: 0;
+}
+.rtl .modal-footer .pull-left .btn, .rtl .modal-footer .pull-left.btn {
+    margin-left: 8px;
+    margin-right: 0;
+}
+.ltr .close
+{
+    float: right;
+}
+.rtl .close
+{
+    float: left;
+}
+.rtl th {
+  text-align: right;
+}
+
+/* End Extra RTL goodness */

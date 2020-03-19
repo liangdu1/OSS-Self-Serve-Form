@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="icon" href="https://sandbox.esignlive.com/a/images/icons/favicon.775850b.ico" type="image/x-icon"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <!-- Latest compiled and minified CSS -->
+
+    <title>OneSpan Sign - rebrand</title>
+
+
+<style type="text/css">
+
+.custom-control{
+padding-left:0!important
+}
+
+.customBtn{
+  background-color: transparent;
+  color: #5940c4!important;
+  border-color:#5940c4!important;
+  font-weight: 600!important;
+  border-width: 2px!important;
+}
+
+
+label{
+  font-weight:600;
+  margin-bottom:-6px;
+}
+
+.form-control{
+	height:40px!important;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+  margin-top:7px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 8px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #5940c4;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #5940c4;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+</style>
+
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://sandbox.esignlive.com/a/images/logo.svg" alt="" />
+        <h2>Rebrand Form</h2>
+        <p class="lead">Please provide the following information so that your account can be configured as per your requirements.  
+ </p>
+      </div>
+<form id="form">
+      <div class="row">
+      
+		
+
+
+
+        <div class="col-md-12 order-md-1">
+          
+            <div id="accountInfo">
+            <h4 class="mb-3">Account Information</h4>
+
+            <div class="row ">
+              <div class="col-md-6 mb-3">
+                <label for="email">Account Email <span class="text-muted">(*)</span></label>
+                <input type="text" class="form-control" id="email" placeholder="" value="" required="true"></input>
+                <div class="invalid-feedback">
+                  Valid Email Address is required!
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="company">Company Name <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="company" placeholder="" value="" ></input>
+                <!-- <div class="invalid-feedback">
+                  Valid last name is required.
+                </div> -->
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="instance">Instance URL<span class="text-muted">(*)</span></label>
+              <div class="input-group">
+                
+
+                 <select class="form-control  col-md-8 mb-3" id="instance" required="true">
+                   	  <option value="" selected="true" disabled="true" hidden="true">---  Choose Here ---</option>
+                      <option value="US2 Production">US2 Production (apps.esignlive.com)</option>
+                      <option value="US2 Sandbox">US2 Sandbox (sandbox.esignlive.com)</option>
+                      <option value="US1 Production">US1 Production (apps.e-signlive.com)</option>
+                      <option value="US1 Sandbox">US1 Sandbox (sandbox.e-signlive.com)</option>
+                      <option value="CA Production">CA Production (apps.e-signlive.ca)</option>
+                      <option value="CA Sandbox">CA Sandbox (sandbox.e-signlive.ca)</option>
+                      <option value="AU Production">AU Production (apps.esignlive.com.au)</option>
+                      <option value="EU Production">EU Production (apps.esignlive.eu)</option>
+                      <option value="US Government Production">US Government Production (signer-gov.esignlive.com)</option>
+                      <option value="US Government Sandbox">US Government Sandbox (signer-sandbox-gov.esignlive.com)</option>
+                  </select>
+                 
+
+              </div>
+            </div>
+            </div>
+
+            
+            <h4 class="mb-3">Rebrand Options</h4>
+			<div id="rebrandOptions">
+           
+           
+
+
+
+           <hr class="mb-3 mt-3"/>
+            <div class="custom-control custom-checkbox mb-3">
+              <div style="height: 40px;">
+              <label class="switch">
+                <input type="checkbox" class="custom-control-input" id="Branding"></input>
+				  <span class="slider round"></span>
+				</label>
+                <label >Branding</label>
+                <a class="btn btn-primary customBtn detailBtn btn-outline-info" data-toggle="collapse" id="BrandingDetail"  href="#BrandingCollapse" role="button" aria-expanded="false" aria-controls="BrandingCollapse" style="float: right;">
+                  Show Details
+                </a>
+              </div>
+              <div class="collapse mb-3 mt-3" id="BrandingCollapse">
+                <div class="card card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+
+                             <div id="BrandingList">
+           				</div>
+
+                          <div class="input-group-append mt-3">
+                            <button class="btn btn-outline-info customBtn" id="BrandingListAddBtn" type="button">+ Add Another Language</button>
+                          </div>
+
+            </div>
+            </div>
+
+		</div>
+
+
+
+            <hr class="mb-4"/>
+            <button type="submit" class="btn btn-success btn-lg btn-block" style="background-color: rgb(0, 111, 176);border-radius: 0px;" id="upload">Send Your Request To Support</button>
+        </div>
+
+      
+      </div>
+      
+      </form>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Terms and Conditions</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
+          <li class="list-inline-item"><a href="#">System Status</a></li>
+          <li class="list-inline-item"><a href="#">Community</a></li>
+          <li class="list-inline-item"><a href="#">Online Help</a></li>
+        </ul>
+        <p class="mb-1">Copyright 2019, OneSpan. All rights reserved.</p>
+      </footer>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script >
+//<![CDATA[
+	
+			var data  = {
+				"featureEnable":{
+					"Enable Subaccount":{
+						"description":"dummy description",
+					},
+					"Enable New Signing Ceremony":{
+						"description":"dummy description",
+					},
+					"Evidence Summary":{
+						"description":"dummy description",
+					},
+					"Document Download":{
+						"description":"dummy description",
+					},
+					"Fast Track":{
+						"description":"dummy description",
+					},
+					"Authentication":{
+						"description":"dummy description",
+					},
+					"Handover URL":{
+						"description":"dummy description",
+					}
+				},
+				"customPerLang":{
+					"Decline":{
+						"description":"dummy description",
+					},
+					"Signing Complete":{
+						"description":"dummy description",
+					}
+				}
+		};
+	
+		function add_feature_enable_option(featureName,featureDesc){
+			var id = featureName.replace(/\s/g, '')
+			var htmlString = '<hr class="mb-3 mt-3"/><div class="custom-control custom-checkbox mb-3"><div style="height: 40px;"> <label class="switch"> <input type="checkbox" class="custom-control-input" id="'+id+'"></input>  <span class="slider round"></span></label> <label >'+featureName+'</label> <a class="btn btn-primary customBtn detailBtn btn-outline-info" data-toggle="collapse" id="'+id+'Detail" href="#'+id+'Collapse" role="button" aria-expanded="false" aria-controls="'+id+'Collapse" style="float: right;"> Show Details </a></div><div class="collapse mb-3 mt-3" id="'+id+'Collapse"><div class="card card-body">'+featureDesc+'</div></div></div>'
+            document.getElementById("rebrandOptions").insertAdjacentHTML('beforeend', htmlString); 
+		}
+		
+		function add_custom_based_on_language(featureName,featureDesc){
+			var id = featureName.replace(/\s/g, '')
+			var htmlString = '<hr class="mb-3 mt-3" /><div class="custom-control custom-checkbox mb-3"><div style="height: 40px;"> <label class="switch"> <input type="checkbox" class="custom-control-input" id="'+id+'"></input> <span class="slider round"></span></label> <label >'+featureName+'</label> <a class="btn btn-primary customBtn detailBtn btn-outline-info" data-toggle="collapse" id="'+id+'Detail" href="#'+id+'Collapse" role="button" aria-expanded="false" aria-controls="'+id+'Collapse" style="float: right;"> Show Details </a></div><div class="collapse mb-3 mt-3" id="'+id+'Collapse"><div class="card card-body">'+featureDesc+'</div><div id="'+id+'List"></div><div class="input-group-append mt-3"> <button class="btn btn-outline-info customBtn" id="'+id+'AddBtn" type="button">+ Add Another Language</button></div></div></div>';
+            document.getElementById("rebrandOptions").insertAdjacentHTML('beforeend', htmlString); 
+		
+	        function addItem(){
+	            var count = 0;
+	            function addItemClosure(){
+	              count++;
+	              var s = '<div class="input-group mt-3" index="'+count+'" id="'+id+count+'"> <select class="form-control  col-md-2 " index="'+count+'" id="'+id+'_language'+count+'"><option value="en">English</option><option value="fr">Français (French)</option><option value="da">Danske (Danish)</option><option value="de">Deutsch (German)</option><option value="es">Español (Spanish)</option><option value="el">Ελληνικά (Greek)</option><option value="it">Italiano (Italian)</option><option value="nl">Nederlands (Dutch)</option><option value="pt">Português (Portuguese)</option><option value="ru">Pусский (Russian)</option><option value="zh-cn">中文简体 (Chinese - Simplified)</option><option value="zh-tw">中文繁體 (Chinese - Traditional)</option><option value="ja">日本語 (Japanese)</option><option value="ko">한국어 (Korean)</option> </select> <input index="'+count+'" id="'+id+'_item'+count+'" type="text" class="form-control" placeholder="Add an item..." aria-label="Add an item" aria-describedby="basic-addon2"/> <a class="btn btn-primary customBtn detailBtn btn-outline-info"  id="'+id+'_rmvBtn'+count+'" index="'+count+'"  style="float: right;"> Delete </a></div>';
+	                document.getElementById(id+"List").insertAdjacentHTML('beforeend', s); 
+	        		$('#'+id+'_rmvBtn'+count).on('click',function(){
+		      			var index = $(this).attr('index');
+		      			$("#"+id+index).remove();
+		      		});
+	            }
+	            return addItemClosure;
+	          }
+	          var addItemFunc = addItem();
+	          $('#'+id+'AddBtn').on("click", addItemFunc);
+		}
+		
+		
+
+		
+		for(var key in data['featureEnable']){
+			add_feature_enable_option(key,data['featureEnable'][key]['description']);
+		}
+		for(var key in data['customPerLang']){
+			add_custom_based_on_language(key,data['customPerLang'][key]['description']);
+
+		}
+		
+
+		
+
+        function addBrand(){
+          var count = 0;
+          function addBrandClosure(){
+            count++;
+            var s = '<div index="'+count+'" id="Branding'+count+'"><div class="input-group mt-3" > <select class="form-control col-md-4" id="Branding_language'+count+'" index="'+count+'"><option value="en">English</option><option value="fr">Français (French)</option><option value="da">Danske (Danish)</option><option value="de">Deutsch (German)</option><option value="es">Español (Spanish)</option><option value="el">Ελληνικά (Greek)</option><option value="it">Italiano (Italian)</option><option value="nl">Nederlands (Dutch)</option><option value="pt">Português (Portuguese)</option><option value="ru">Pусский (Russian)</option><option value="zh-cn">中文简体 (Chinese - Simplified)</option><option value="zh-tw">中文繁體 (Chinese - Traditional)</option><option value="ja">日本語 (Japanese)</option><option value="ko">한국어 (Korean)</option> </select> <input class="col-md-8" type="file" id="Branding_item'+count+'" index="'+count+'" /><a class="btn btn-primary customBtn detailBtn btn-outline-info"  id="Branding_rmvBtn'+count+'" index="'+count+'"  style="float: right;"> Delete </a></div><div id="img_contain"><img id="Branding_image'+count+'" index="'+count+'" align="middle" src="http://www.clker.com/cliparts/c/W/h/n/P/W/generic-image-file-icon-hi.png" alt="your image" title="" style="max-height: 400px; max-width: 400px;" ></img></div></div>';
+              console.log(count);
+
+              document.getElementById("BrandingList").insertAdjacentHTML('beforeend', s); 
+				
+              
+            	$('#Branding_rmvBtn'+count).on('click',function(){
+        			var index = $(this).attr('index');
+        			$("#Branding"+index).remove();
+        			
+        		});
+
+              $("#Branding_item"+count).change(function(event) {  
+                  if (this.files && this.files[0]) {   
+                  var reader = new FileReader();
+                  var filename = $(this).val();
+                  //filename = filename.substring(filename.lastIndexOf('\\')+1);
+                  var index = $(this).attr('index');
+
+                  reader.onload = function(e) {
+                  $("#Branding_image" + index).attr('src', e.target.result); 
+                  }
+                  reader.readAsDataURL(this.files[0]);    
+                } 
+              });
+
+          }
+          return addBrandClosure;
+        }
+        var addBrandFunc = addBrand();
+
+        $("#BrandingListAddBtn").on("click", addBrandFunc);
+
+
+        
+        
+        
+        
+        //====================
+        //========= upload ===
+        //====================
+        	
+        $('#upload').on('click', function() {
+       		if($('#email').val() && $('#instance').val()){
+				var form_data = new FormData();
+				
+				//required info
+				form_data.append('email', $('#email').val());
+				form_data.append('instance', $('#instance').val());
+				
+				//optional info
+				if($('#company').val()){
+					form_data.append('company', $('#company').val());
+				}
+				
+				
+				//logos
+				if(document.getElementById('Branding').checked){
+					
+					$("#BrandingList").children().each(function(){
+						var i = $(this).attr('index');
+						 
+						var file_data = $("#Branding_item" + i).prop('files')[0];
+						var filename = $("#Branding_item" + i).val();
+						var filename = filename.substring(filename.lastIndexOf('\\')+1);
+						var extension = filename.substring(filename.lastIndexOf('.'));
+						if(filename){
+							form_data.append('logo', file_data,'logo_' + $("#Branding_language" + i).val()+extension);
+						}
+					});
+				}
+				
+				
+				//json payload
+				var payload = {};
+				
+				for(var key in data['featureEnable']){
+					var id = key.replace(/\s/g, '')
+					if(document.getElementById(id).checked){
+						payload[id]=true
+					}
+				}
+				for(var key in data['customPerLang']){
+					var id = key.replace(/\s/g, '')
+					if(document.getElementById(id).checked){
+						var jsonData = {};
+						$('#'+id+'List').children().each(function(){
+							var i = $(this).attr('index');
+							jsonData[$('#'+id+'_language' + i).val()] = $('#'+id+'_item' + i).val();
+						});
+						payload[id] = jsonData;
+					}
+				}
+				
+				form_data.append('payload',JSON.stringify(payload));
+				
+				$.ajax({
+					url : '/a/rebrand.do', // point to server-side controller method
+					dataType : 'json', // what to expect back from the server
+					contentType : false,
+					processData : false,
+					data : form_data,
+					type : 'post',
+					enctype: 'multipart/form-data',
+					success : function(response) {
+					},
+					error : function(response) {
+					}
+				});
+		
+       		}
+        	
+		});
+        
+        $("form").on('submit',function(e){
+		    e.preventDefault();
+		});
+    	
+        $(".custom-control-input").change(function() {
+            if (this.checked) {
+                $("#" + this.id + "Collapse").collapse('show');
+                $("#" + this.id + "Detail").text('Hide Details');
+            } else {
+                 $("#" + this.id + "Collapse").collapse('hide');
+                $("#" + this.id + "Detail").text('Show Details');
+            }
+        });
+		
+        
+		$('.detailBtn').on('click',function(){
+			var isExpanded = $(this).attr("aria-expanded");
+			if(isExpanded == 'false'){
+				$(this).text('Hide Details');
+			}else {
+				$(this).text('Show Details');
+			}
+		});
+
+     // ]]>
+
+
+    </script>
+  </body>
+</html>
