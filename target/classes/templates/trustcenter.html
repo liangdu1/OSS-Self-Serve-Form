@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="icon" href="https://sandbox.esignlive.com/a/images/icons/favicon.775850b.ico" type="image/x-icon"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <!-- Latest compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <title>Alert - OSS Production and Sandbox connection issues</title>
+
+
+<style type="text/css">
+
+.custom-control{
+padding-left:0!important
+}
+
+.customBtn{
+  background-color: transparent;
+  color: #5940c4!important;
+  border-color:#5940c4!important;
+  font-weight: 600!important;
+  border-width: 2px!important;
+}
+
+
+label{
+  font-weight:600;
+  margin-bottom:-6px;
+}
+
+.form-control{
+	height:40px!important;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+  margin-top:7px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 8px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #5940c4;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #5940c4;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+table { font-size: 16px; border-collapse: collapse; }
+table th { border: 1px solid #aaa; }
+table td { border: 1px solid #d0d0d0; }
+
+
+.bd-example-modal-lg .modal-dialog{
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    top: calc(50% - 24px);
+  }
+  
+  .bd-example-modal-lg .modal-dialog .modal-content{
+    background-color: transparent;
+    border: none;
+  }
+
+</style>
+
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="https://sandbox.esignlive.com/a/images/logo.svg" alt="" />
+        <h2>Alert Email</h2>
+        <p class="lead">Please provide the following information:</p>
+      </div>
+      
+      
+   	  <div class="form-group">
+	    <label for="emailSubject">Subject</label>
+	    <input  class="form-control" id="emailSubject" value="Alert - OSS Production and Sandbox connection issues"/>
+	  </div>
+	  <div class="form-group">
+	    <label for="emailBody">Email Body</label>
+	    <textarea class="form-control" id="emailBody" rows="10" style="height:200px!important;">We are currently experiencing connection issues in both CA Production and Sandbox.</textarea>
+	  </div>
+      
+      	<hr class="mb-4"/>
+      
+    	<button class="btn btn-success btn-lg" style="background-color: rgb(0, 111, 176);border-radius: 0px;" id="testUpload">Test Send</button>
+      
+   		<hr class="mb-4"/>
+     
+		<div class="row" style="margin:auto;">
+		    <input id="clientlist" type="file" onchange="loadFile()"/>
+		 </div>
+       
+		 <hr class="mb-4"/>
+		 <div class="row" >
+		    <table id="csvTable" cellpadding="10" style="margin:auto;"></table>
+		 </div>
+		 
+		 
+		 <hr class="mb-4"/>
+		 
+		 
+		 
+ 	 	<button class="btn btn-success btn-lg" style="background-color: rgb(0, 111, 176);border-radius: 0px;" id="trueUpload" disabled="true" >Bulk Send To Clients</button>
+            
+     
+     
+     <div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1" id="loading">
+	    <div class="modal-dialog modal-sm">
+	        <div class="modal-content" style="width: 48px">
+	            <span class="fa fa-spinner fa-spin fa-3x"></span>
+	        </div>
+   		</div>
+	</div>
+
+
+<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body" id="messageContent">
+      </div>
+    </div>
+  </div>
+</div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Terms and Conditions</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Notice</a></li>
+          <li class="list-inline-item"><a href="#">System Status</a></li>
+          <li class="list-inline-item"><a href="#">Community</a></li>
+          <li class="list-inline-item"><a href="#">Online Help</a></li>
+        </ul>
+        <p class="mb-1">Copyright 2019, OneSpan. All rights reserved.</p>
+      </footer>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- d3, CSV parser -->
+  <script data-require="d3@3.5.3" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+
+
+
+  
+
+<script >
+//<![CDATA[
+	
+		    var reader = new FileReader();  
+		    
+		    function loadFile() {      
+		      var file = document.querySelector('input[type=file]').files[0];      
+		      reader.addEventListener("load", parseFile, false);
+		      if (file) {
+		        reader.readAsText(file);
+		      }      
+		    }
+		    
+		    function parseFile(){
+		      var data = d3.csv.parse(reader.result);
+		      create_table(data);
+	       }
+		    
+		    function create_table(data) {
+		    	  var keys = d3.keys(data[0]);
+		    	  d3.select("#csvTable")
+		    	    .html("")
+		    	    .append("tr")
+		    	    .selectAll("th")
+		    	    .data(keys)
+		    	    .enter().append("th")
+		    	      .text(function(d) { return d; });
+
+		    	  d3.select("#csvTable")
+		    	    .selectAll("tr.row")
+		    	      .data(data)
+		    	    .enter().append("tr")
+		    	      .selectAll("td")
+		    	      .data(function(d) { return keys.map(function(key) { return d[key] }) ; })
+		    	      .enter().append("td")
+		    	        .text(function(d) { return d; });
+		    	}
+	
+	
+	        //test send
+	        $('#testUpload').on('click', function() {
+	       	       $('#loading').modal('show');
+					var form_data = new FormData();
+					form_data.append('emailSubject', $('#emailSubject').val());
+					form_data.append('emailBody', $('#emailBody').val());
+					
+					$.ajax({
+						url : '/a/testSend.do', // point to server-side controller method
+						contentType : false,
+						processData : false,
+						data : form_data,
+						type : 'post',
+						enctype: 'multipart/form-data',
+						success : function(response) {
+							console.log("test send success!");
+							$('#loading').modal('hide');
+							document.getElementById("messageContent").innerHTML = "Check your mail box: ahmad.hattab@onespan.com";
+							document.getElementById("trueUpload").disabled = false;
+
+							$('#message').modal('show');
+						},
+						error : function(response) {
+						}
+					});
+					
+			});
+		    
+		    
+        //upload to server
+        $('#trueUpload').on('click', function() {
+       	       $('#loading').modal('show');
+				var form_data = new FormData();
+				form_data.append('emailSubject', $('#emailSubject').val());
+				form_data.append('emailBody', $('#emailBody').val());
+				form_data.append('clientlist', $('input[type=file]')[0].files[0]); 
+				
+				$.ajax({
+					url : '/a/trueSend.do', // point to server-side controller method
+					dataType : 'json', // what to expect back from the server
+					contentType : false,
+					processData : false,
+					data : form_data,
+					type : 'post',
+					enctype: 'multipart/form-data',
+					success : function(response) {
+						$('#loading').modal('hide');
+						$('#message').modal('show');
+						document.getElementById("messageContent").innerHTML = "Successfully sent to clients!";
+
+						
+					},
+					error : function(response) {
+					}
+				});
+				
+		});
+        
+    	
+      
+
+        // ]]>
+    </script>
+  </body>
+</html>
